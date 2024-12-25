@@ -1,0 +1,14 @@
+node_modules/
+dist/
+app/css/*
+
+npm-debag.*
+package-lock.json
+
+.DS_Store
+.idea/
+.idea/*
+.vscode
+*.sublime*
+
+
