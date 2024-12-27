@@ -1,6 +1,10 @@
-@import './_vars';
-@import './_fonts';
-@import './_media';
 @import './_reset';
+@import './jquery.fancybox.scss';
+@import './_fonts';
+@import './_vars';
 @import './_mixins';
 @import './_global';
+@import './header.scss';
+@import './footer.scss';
+@import './title-page.scss';
+@import './_media';

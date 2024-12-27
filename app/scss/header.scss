@@ -1,0 +1,39 @@
+.header__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__nav {
+	display: flex;
+}
+
+.menu__list {
+	display: flex;
+	gap: 45px;
+	margin-right: 67px;
+}
+
+.user__menu {
+	display: flex;
+	gap: 36px;
+	margin-right: 12px;
+}
+
+.user__menu-link--count {
+	position: relative;
+}
+
+.user__menu-count {
+	position: absolute;
+	top: -9px;
+	right: -7px;
+	width: 14px;
+	height: 14px;
+	color: $white;
+	text-align: center;
+	font-size: 10px;
+	font-weight: 400;
+	background-color: $orange;
+	border-radius: 50%;
+}
