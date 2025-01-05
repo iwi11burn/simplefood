@@ -1,0 +1,30 @@
+$white: #ffffff;
+$black: #000000;
+$accent: #ff6838;
+$silver-1: #f9faff;
+$silver-2: #ececec;
+$gray: #c2c2c2;
+$darkBlue: #363853;
+$dark: #31352b;
+$bgactive: #fff2ed;
+
+%rubik-300 {
+	font-family: 'Rubik', sans-serif;
+	font-weight: 300;
+}
+
+%rubik-400 {
+	font-family: 'Rubik', sans-serif;
+	font-weight: 400;
+}
+
+%rubik-i-400 {
+	font-family: 'Rubik', sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+%rubik-500 {
+	font-family: 'Rubik', sans-serif;
+	font-weight: 500;
+}

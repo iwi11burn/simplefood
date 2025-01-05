@@ -1,0 +1,20 @@
+@import './abstracts/_vars.scss';
+@import './abstracts/_mixins.scss';
+
+@import './base/_reset.scss';
+@import './base/_fonts.scss';
+@import './base/_global.scss';
+
+@import './components/_product-card.scss';
+@import './components/_contact.scss';
+@import './components/_subscribe.scss';
+
+@import './layout/_header.scss';
+@import './layout/_footer.scss';
+
+@import './pages/_page-index.scss';
+@import './pages/_page-catalog.scss';
+@import './pages/_page-product.scss';
+
+@import './vendors/_fancybox.scss';
+@import './vendors/_slick.scss';

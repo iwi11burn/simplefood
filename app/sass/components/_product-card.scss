@@ -1,0 +1,42 @@
+.product-card {
+	max-width: 210px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $white;
+	transition: box-shadow 0.3s;
+	border-radius: 5px;
+	box-shadow: 0px 0px 0px 1px #ececec;
+	padding: 20px 15px;
+
+	&__image {
+		margin-bottom: 10px;
+	}
+
+	&__title {
+		font-size: 15px;
+		line-height: normal;
+		margin-bottom: 28px;
+	}
+
+	&__price {
+		color: $darkBlue;
+		font-size: 15px;
+		line-height: 1.4;
+		margin-top: auto;
+		margin-bottom: 10px;
+	}
+
+	&__button {
+		font-size: 14px;
+		padding: 7px 16px;
+	}
+
+	&:hover {
+		box-shadow: 0px 0px 0px 1px $accent;
+	}
+
+	
+}

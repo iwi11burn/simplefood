@@ -1,0 +1,80 @@
+.contact-info {
+  &__item {
+    margin-bottom: 15px;
+  }
+  
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    width: 193px;
+    font-size: 18px;
+  }
+  
+  &__social {
+    display: inline-flex;
+  }
+  
+  &__social-link {
+    position: relative;
+    width: 39px;
+    height: 39px;
+    background-color: $gray;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+  
+    &:hover {
+      background-color: $accent;
+    }
+  
+    &:active {
+      background-color: $bgactive;
+    }
+  }
+  
+  &__social-link::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: $black;
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  &__social-link--facebook::before {
+    mask-image: url('../../images/sprite.svg#icon-facebook');
+    width: 10px;
+    height: 20px;
+  }
+  
+  &__social-link--twitter::before {
+    mask-image: url('../../images/sprite.svg#icon-twitter');
+    width: 20px;
+    height: 17px;
+  }
+  
+  &__social-link--instagram::before {
+    mask-image: url('../../images/sprite.svg#icon-instagram');
+    width: 20px;
+    height: 20px;
+  }
+  
+  &__social-link:hover::before {
+    background-color: $white;
+  }
+  
+  &__social-link:active::before {
+    background-color: $accent;
+  }
+  
+  &__social-item:not(:last-child) {
+    margin-right: 13px;
+  }
+}
+
+
