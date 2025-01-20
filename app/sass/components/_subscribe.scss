@@ -1,57 +1,62 @@
 .subscribe {
-  &__input {
-    background: $white;
-    height: 44px;
-    border-radius: 5px;
-    border: 1px solid $gray;
-    padding: 13px 15px;
-    transition: box-shadow 0.3s;
-    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
-  }
-  
-  &__input:focus {
-    border: 1px solid rgba(194, 194, 194, 0);
-    box-shadow: 0 0 0 2px $accent;
-  }
-  
-  &__input:hover::placeholder {
-    transition: color 0.3s;
-    color: $darkBlue;
-  }
-  
-  &__input::placeholder {
-    color: $gray;
-    font-size: 14px;
-    line-height: 1.3;
-  }
-  
-  &__submit {
-    padding: 13px 38px;
-    box-sizing: border-box;
-    @extend %rubik-500;
-    font-size: 14px;
-    line-height: 1.3;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-  
-    &:hover &__submit-icon {
-      fill: $accent;
-    }
-  
-    &:active &__submit-icon {
-      fill: $accent;
-    }
-  }
-  
-  &__submit-icon {
-    fill: $white;
-    stroke: none;
-    width: 16px;
-    height: 16px;
-    transition: fill 0.3s;
-    flex-shrink: 0;
-    display: block;
-  }
-}
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	max-width: 200px;
+	width: 100%;
 
+	&__input {
+		background: $white;
+		width: 200px;
+		height: 44px;
+		border-radius: 5px;
+		border: 1px solid $gray;
+		padding: 13px 15px;
+		transition: box-shadow 0.3s;
+	}
+
+	&__input:focus {
+		border: 1px solid rgba(194, 194, 194, 0);
+		box-shadow: 0 0 0 2px $accent;
+	}
+
+	&__input:hover {
+		&::placeholder {
+			transition: color 0.3s;
+			color: $darkBlue;
+		}
+	}
+
+	&__input::placeholder {
+		color: $gray;
+		font-size: 14px;
+		line-height: 1.3;
+	}
+
+	.subscribe__submit {
+		padding: 13px 38px;
+		box-sizing: border-box;
+		font-size: 14px;
+		line-height: 1.3;
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		cursor: pointer;
+
+		&:hover .subscribe__submit-icon {
+			fill: $accent;
+		}
+
+		&:active .subscribe__submit-icon {
+			fill: $accent;
+		}
+	}
+
+	.subscribe__submit-icon {
+		stroke: none;
+		fill: $white;
+		width: 16px;
+		height: 16px;
+		transition: fill 0.3s;
+	}
+}

@@ -1,0 +1,26 @@
+.rest-card {
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s;
+
+	&:hover {
+		box-shadow: 0 3px 15px 0 rgba(255, 104, 56, 0.5);
+	}
+
+	&__img {
+		display: block;
+		overflow: hidden;
+	}
+
+	&__img img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	&__wrapper {
+		background-color: $white;
+		padding: 15px 20px 24px;
+	}
+}
