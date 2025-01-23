@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Simple Food - Главная страница</title>
+		<link href="./css/style.min.css" rel="stylesheet" />
+		<link type="image/png" href="/favicon-96x96.png" rel="icon" sizes="96x96" />
+		<link type="image/svg+xml" href="/favicon.svg" rel="icon" />
+		<link href="/favicon.ico" rel="shortcut icon" />
+		<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+		<link href="/site.webmanifest" rel="manifest" />
+	</head>
+	<body>
+ <header class="header section">
+	<div class="container">
+		<h1 class="sr-only">Сайт доставки еды</h1>
+		<nav class="header__menu">
+			<a class="header__logo logo" href="#">
+				<img
+					class="header__logo-img logo__img"
+					src="./images/logo.svg"
+					alt="Логотип SimpleFood"
+				/>
+			</a>
+			<ul class="menu-list">
+				<li class="menu-list__item">
+					<a class="menu-list__link link" href="./index.html">Главная</a>
+				</li>
+				<li class="menu-list__item">
+					<a class="menu-list__link link" href="./catalog.html">Блюда</a>
+				</li>
+				<li class="menu-list__item">
+					<a class="menu-list__link link" href="#">Контакты</a>
+				</li>
+			</ul>
+			<ul class="user-menu">
+				<li class="user-menu__item">
+					<a class="user-menu__link" href="#"
+						><span class="sr-only">Кнопка поиска</span
+						><svg class="user-menu__icon user-menu__icon--search icon">
+							<use xlink:href="./images/sprite.svg#icon-search"></use></svg
+					></a>
+				</li>
+				<li class="user-menu__item">
+					<a class="user-menu__link user-menu__link--count" href="#"
+						><span class="sr-only">Кнопка перехода в корзину</span>
+						<svg class="user-menu__icon user-menu__icon--cart icon">
+							<use xlink:href="./images/sprite.svg#icon-cart"></use>
+						</svg>
+						<span class="user-menu__count">4</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+<main>
+	<nav class="breadcrumbs">
+	<div class="container">
+		<ul class="breadcrumbs__list" id="breadcrumb-list">
+			<li class="breadcrumbs__item">
+				<a href="#" class="breadcrumbs__link"></a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+	<section class="catalog section">
+	<div class="container">
+		<div class="catalog__inner">
+			<h2 class="catalog__title title">Каталог продуктов</h2>
+			<div class="sort">
+				<div class="sort__item">
+					<label for="sort-by" class="sort__label sr-only">Сортировать</label>
+					<div class="sort__wrapper">
+						<select id="sort-by" class="sort__select">
+							<option value="name">По названию</option>
+							<option value="price">По цене</option>
+							<option value="popularity">По популярности</option>
+						</select>
+						<svg class="sort__icon icon">
+							<use
+								xlink:href="../../../images/sprite.svg#icon-chevron-left"
+							></use>
+						</svg>
+					</div>
+				</div>
+				<div class="sort__item">
+					<label for="items-per-page" class="sort__label sr-only"
+						>Количество</label
+					>
+					<div class="sort__wrapper">
+						<select id="items-per-page" class="sort__select">
+							<option value="12">по 12</option>
+							<option value="24">по 24</option>
+							<option value="48">по 48</option>
+						</select>
+						<svg class="sort__icon icon">
+							<use
+								xlink:href="../../../images/sprite.svg#icon-chevron-left"
+							></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="catalog__wrapper">
+			<div class="catalog__filters">
+				<div class="catalog__categories filters-container">
+					<h3 class="catalog__categories-title filters-title">Категории</h3>
+					<ul class="catalog__categories-list">
+						<li class="catalog__categories-item">
+							<button class="catalog__categories-button filter-text">
+								Бургеры
+							</button>
+						</li>
+						<li class="catalog__categories-item">
+							<button class="catalog__categories-button filter-text">
+								Пицца
+							</button>
+						</li>
+						<li class="catalog__categories-item">
+							<button class="catalog__categories-button filter-text">
+								Сэндвичи
+							</button>
+						</li>
+						<li class="catalog__categories-item">
+							<button class="catalog__categories-button filter-text">
+								Азиатская кухня
+							</button>
+						</li>
+						<li class="catalog__categories-item">
+							<button class="catalog__categories-button filter-text">
+								Сеты
+							</button>
+						</li>
+						<li class="catalog__categories-item">
+							<button class="catalog__categories-button filter-text">
+								Европейская кухня
+							</button>
+						</li>
+						<li class="catalog__categories-item">
+							<button class="catalog__categories-button filter-text">
+								Напитки
+							</button>
+						</li>
+						<li class="catalog__categories-item">
+							<button class="catalog__categories-button filter-text">
+								Алкоголь
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div class="catalog__offers filters-container">
+					<h3 class="catalog__offers-title filters-title">Предложения</h3>
+					<ul class="catalog__offers-list">
+						<li class="catalog__offers-item">
+							<label class="catalog__offers-label">
+								<input
+									class="catalog__offers-input filter-text"
+									type="checkbox"
+								/>
+								Со скидкой
+							</label>
+						</li>
+						<li class="catalog__offers-item">
+							<label class="catalog__offers-label">
+								<input
+									class="catalog__offers-input filter-text"
+									type="checkbox"
+									checked
+								/>
+								Новинка
+							</label>
+						</li>
+						<li class="catalog__offers-item">
+							<label class="catalog__offers-label">
+								<input
+									class="catalog__offers-input filter-text"
+									type="checkbox"
+								/>
+								Хит
+							</label>
+						</li>
+					</ul>
+				</div>
+				<div class="catalog__price-range filters-container">
+					<h3 class="catalog__price-range-title filters-title">Цена</h3>
+					<div class="catalog__price-range-inputs">
+						<div class="catalog__price-range-input-wrapper">
+							<span class="catalog__price-range-label filter-text">От</span>
+							<input
+								class="catalog__price-range-input"
+								type="number"
+								id="min-price"
+								value="100"
+							/>
+						</div>
+						<div class="catalog__price-range-input-wrapper">
+							<span class="catalog__price-range-label filter-text">До</span>
+							<input
+								class="catalog__price-range-input"
+								type="number"
+								id="max-price"
+								value="1000"
+							/>
+						</div>
+					</div>
+					<div class="catalog__price-range-slider">
+						<input
+							class="catalog__price-range-slider-input"
+							type="range"
+							id="range"
+							min="0"
+							max="1000"
+							value="100"
+						/>
+					</div>
+				</div>
+			</div>
+			<div class="catalog__product">
+				<ul class="catalog__product-list">
+					<li class="catalog__product-item">
+						<article class="product-card">
+							<img
+								class="product-card__image"
+								src="./images/product-card__image/item_01.png"
+								alt="гамбургер"
+								width="140"
+								height="140"
+							/>
+							<h3 class="product-card__title">Чизбургер с листьями салата</h3>
+							<span class="product-card__price">160 <span>грн</span>.</span>
+							<button class="product-card__button button-primary" type="button">
+								В корзину
+							</button>
+						</article>
+					</li>
+					<li class="catalog__produc-item">
+						<article class="product-card">
+							<img
+								class="product-card__image"
+								src="./images/product-card__image/item_01.png"
+								alt="гамбургер"
+								width="140"
+								height="140"
+							/>
+							<h3 class="product-card__title">Чизбургер с листьями салата</h3>
+							<span class="product-card__price">160 <span>грн</span>.</span>
+							<button class="product-card__button button-primary" type="button">
+								В корзину
+							</button>
+						</article>
+					</li>
+					<li class="catalog__produc-item">
+						<article class="product-card">
+							<img
+								class="product-card__image"
+								src="./images/product-card__image/item_01.png"
+								alt="гамбургер"
+								width="140"
+								height="140"
+							/>
+							<h3 class="product-card__title">Чизбургер с листьями салата</h3>
+							<span class="product-card__price">160 <span>грн</span>.</span>
+							<button class="product-card__button button-primary" type="button">
+								В корзину
+							</button>
+						</article>
+					</li>
+					<li class="catalog__produc-item">
+						<article class="product-card">
+							<img
+								class="product-card__image"
+								src="./images/product-card__image/item_01.png"
+								alt="гамбургер"
+								width="140"
+								height="140"
+							/>
+							<h3 class="product-card__title">Чизбургер с листьями салата</h3>
+							<span class="product-card__price">160 <span>грн</span>.</span>
+							<button class="product-card__button button-primary" type="button">
+								В корзину
+							</button>
+						</article>
+					</li>
+					<li class="catalog__produc-item">
+						<article class="product-card">
+							<img
+								class="product-card__image"
+								src="./images/product-card__image/item_01.png"
+								alt="гамбургер"
+								width="140"
+								height="140"
+							/>
+							<h3 class="product-card__title">Чизбургер с листьями салата</h3>
+							<span class="product-card__price">160 <span>грн</span>.</span>
+							<button class="product-card__button button-primary" type="button">
+								В корзину
+							</button>
+						</article>
+					</li>
+					<li class="catalog__produc-item">
+						<article class="product-card">
+							<img
+								class="product-card__image"
+								src="./images/product-card__image/item_01.png"
+								alt="гамбургер"
+								width="140"
+								height="140"
+							/>
+							<h3 class="product-card__title">Чизбургер с листьями салата</h3>
+							<span class="product-card__price">160 <span>грн</span>.</span>
+							<button class="product-card__button button-primary" type="button">
+								В корзину
+							</button>
+						</article>
+					</li>
+					<li class="catalog__produc-item">
+						<article class="product-card">
+							<img
+								class="product-card__image"
+								src="./images/product-card__image/item_01.png"
+								alt="гамбургер"
+								width="140"
+								height="140"
+							/>
+							<h3 class="product-card__title">Чизбургер с листьями салата</h3>
+							<span class="product-card__price">160 <span>грн</span>.</span>
+							<button class="product-card__button button-primary" type="button">
+								В корзину
+							</button>
+						</article>
+					</li>
+					<li class="catalog__produc-item">
+						<article class="product-card">
+							<img
+								class="product-card__image"
+								src="./images/product-card__image/item_01.png"
+								alt="гамбургер"
+								width="140"
+								height="140"
+							/>
+							<h3 class="product-card__title">Чизбургер с листьями салата</h3>
+							<span class="product-card__price">160 <span>грн</span>.</span>
+							<button class="product-card__button button-primary" type="button">
+								В корзину
+							</button>
+						</article>
+					</li>
+					<li class="catalog__produc-item">
+						<article class="product-card">
+							<img
+								class="product-card__image"
+								src="./images/product-card__image/item_01.png"
+								alt="гамбургер"
+								width="140"
+								height="140"
+							/>
+							<h3 class="product-card__title">Чизбургер с листьями салата</h3>
+							<span class="product-card__price">160 <span>грн</span>.</span>
+							<button class="product-card__button button-primary" type="button">
+								В корзину
+							</button>
+						</article>
+					</li>
+					<li class="catalog__produc-item">
+						<article class="product-card">
+							<img
+								class="product-card__image"
+								src="./images/product-card__image/item_01.png"
+								alt="гамбургер"
+								width="140"
+								height="140"
+							/>
+							<h3 class="product-card__title">Чизбургер с листьями салата</h3>
+							<span class="product-card__price">160 <span>грн</span>.</span>
+							<button class="product-card__button button-primary" type="button">
+								В корзину
+							</button>
+						</article>
+					</li>
+					<li class="catalog__produc-item">
+						<article class="product-card">
+							<img
+								class="product-card__image"
+								src="./images/product-card__image/item_01.png"
+								alt="гамбургер"
+								width="140"
+								height="140"
+							/>
+							<h3 class="product-card__title">Чизбургер с листьями салата</h3>
+							<span class="product-card__price">160 <span>грн</span>.</span>
+							<button class="product-card__button button-primary" type="button">
+								В корзину
+							</button>
+						</article>
+					</li>
+					<li class="catalog__produc-item">
+						<article class="product-card">
+							<img
+								class="product-card__image"
+								src="./images/product-card__image/item_01.png"
+								alt="гамбургер"
+								width="140"
+								height="140"
+							/>
+							<h3 class="product-card__title">Чизбургер с листьями салата</h3>
+							<span class="product-card__price">160 <span>грн</span>.</span>
+							<button class="product-card__button button-primary" type="button">
+								В корзину
+							</button>
+						</article>
+					</li>
+				</ul>
+				<div class="pagination">
+					<button class="pagination__nav btn-container">
+						<svg class="pagination__icon icon">
+							<use
+								xlink:href="../../../images/sprite.svg#icon-chevron-left"
+							></use>
+						</svg>
+					</button>
+					<ul class="pagination__list">
+						<li class="pagination__item">
+							<button class="pagination__btn btn-container">1</button>
+						</li>
+						<li class="pagination__item">
+							<button class="pagination__btn btn-container">2</button>
+						</li>
+						<li class="pagination__item">
+							<button class="pagination__btn btn-container">...</button>
+						</li>
+						<li class="pagination__item">
+							<button class="pagination__btn btn-container">9</button>
+						</li>
+						<li class="pagination__item">
+							<button class="pagination__btn btn-container">10</button>
+						</li>
+					</ul>
+					<button class="pagination__nav btn-container">
+						<svg class="pagination__icon icon pagination__icon--right">
+							<use
+								xlink:href="../../../images/sprite.svg#icon-chevron-left"
+							></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="mobile-app section">
+	<div class="container">
+		<div class="mobile-app__wrapper">
+			<div class="mobile-app__content">
+				<h2 class="mobile-app__title title">Скачайте мобильное приложение</h2>
+				<p class="mobile-app__text">
+					Рестораны, которые вы любите - в ваших руках. Устанавливайте
+					приложение и заказывайте еду в любом удобном месте.
+				</p>
+				<div class="mobile-app__download">
+					<a
+						href="#"
+						class="mobile-app__download-link mobile-app__download-link--app-store"
+						target="_blank"
+					>
+						<span class="sr-only"
+							>Ссылка для скачивания мобильного приложения в App Store
+						</span>
+					</a>
+					<a
+						href="#"
+						class="mobile-app__download-link mobile-app__download-link--google-play"
+						target="_blank"
+						><span class="sr-only"
+							>Ссылка для скачивания мобильного приложения в Google Play</span
+						></a
+					>
+				</div>
+			</div>
+			<div
+				class="mobile-app__inner"
+				style="background-image: url('./images/home-page/mobile-app.jpg')"
+			>
+				<span class="sr-only"
+					>мобильное приложение SimpleFood на экране смартфона.</span
+				>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="promotion section">
+	<div class="container">
+		<h2 class="promotion__title title">Акции и скидки</h2>
+		<ul class="promotion__list">
+			<li class="promotion__item">
+				<article class="info-card">
+					<a href="#" class="info-card__img"
+						><img
+							src="./images/info-card/blaze-pizza.jpg"
+							alt="обзор ресторана"
+					/></a>
+					<div class="info-card__wrapper">
+						<h3 class="promotion__text">Скидка 50% на вторую пиццу</h3>
+					</div>
+				</article>
+			</li>
+			<li class="promotion__item">
+				<article class="info-card">
+					<a href="#" class="info-card__img"
+						><img src="./images/info-card/kfc.jpg" alt="обзор ресторана"
+					/></a>
+					<div class="info-card__wrapper">
+						<h3 class="promotion__text">
+							Картошечка из KFC даром при заказе бургера
+						</h3>
+					</div>
+				</article>
+			</li>
+			<li class="promotion__item">
+				<article class="info-card">
+					<a href="#" class="info-card__img"
+						><img
+							src="./images/info-card/star-burgers.jpg"
+							alt="обзор ресторана"
+					/></a>
+					<div class="info-card__wrapper">
+						<h3 class="promotion__text">Чёрные бургеры на чёрный день</h3>
+					</div>
+				</article>
+			</li>
+		</ul>
+	</div>
+</section>
+
+</main>
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer__wrapper section">
+			<div class="footer__form">
+				<a class="footer__logo logo" href="#">
+					<img
+						class="footer__logo-img logo__img"
+						src="./images/logo.svg"
+						alt="Логотип SimpleFood"
+						width="200px"
+						height="39px"
+					/>
+				</a>
+				<form class="footer__subscribe subscribe">
+					<label class="sr-only" for="input">Введите свой email</label>
+					<input class="subscribe__input" type="text" placeholder="Ваш email" />
+					<button class="subscribe__submit button-primary" type="submit">
+						<svg class="subscribe__submit-icon icon">
+							<use xlink:href="./images/sprite.svg#icon-telegram"></use></svg
+						>Подписаться
+					</button>
+				</form>
+			</div>
+
+			<ul class="footer__list">
+				<li class="footer__list-item">
+					<a class="footer__list-link link" href="#">Как это работает</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__list-link link" href="#">Продукты</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__list-link link" href="#">Блюда</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__list-link link" href="#">Меню</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__list-link link" href="#">О нас</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__list-link link" href="#">Новости</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__list-link link" href="#">Партнеры</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__list-link link" href="#">ЧаВо</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__list-link link" href="#">Скачать приложение</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__list-link link" href="#">Блог</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__list-link link" href="#">Что нового?</a>
+				</li>
+				<li class="footer__list-item">
+					<a class="footer__list-link link" href="#">Карта сайта</a>
+				</li>
+			</ul>
+			<div class="contact-info">
+				<ul class="contact-info__list">
+					<li class="contact-info__item">
+						<a class="contact-info__link link" href="#"
+							><svg
+								class="contact-info__icon contact-info__icon--location icon"
+							>
+								<use xlink:href="./images/sprite.svg#icon-location"></use>
+							</svg>
+							ул. Т.Г.Шевченко, 1</a
+						>
+					</li>
+					<li class="contact-info__item">
+						<a class="contact-info__link link" href="#"
+							><svg class="contact-info__icon contact-info__icon--call icon">
+								<use xlink:href="./images/sprite.svg#icon-call"></use></svg
+							>380501112233</a
+						>
+					</li>
+					<li class="contact-info__item">
+						<a class="contact-info__link link" href="#"
+							><svg class="contact-info__icon contact-info__icon--message icon">
+								<use xlink:href="./images/sprite.svg#icon-message"></use></svg
+							>support@sfood.com</a
+						>
+					</li>
+				</ul>
+				<ul class="contact-info__social">
+					<li class="contact-info__social-item">
+						<a
+							class="contact-info__social-link contact-info__social-link--facebook"
+							href="#"
+							><span class="sr-only">перейти в Фейсбук</span></a
+						>
+					</li>
+					<li class="contact-info__social-item">
+						<a
+							class="contact-info__social-link contact-info__social-link--twitter"
+							href="#"
+							><span class="sr-only">перейти в Твиттер</span></a
+						>
+					</li>
+					<li class="contact-info__social-item">
+						<a
+							class="contact-info__social-link contact-info__social-link--instagram"
+							href="#"
+							><span class="sr-only">перейти в Инстаграм</span></a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer__copyright">
+		<p class="footer__copyright-text">© 2022 Simple Food</p>
+	</div>
+</footer>
+ <script src="./js/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.breadcrumbs {
+	background-color: rgba(255, 122, 80, 0.1);
+	padding: 24px 0;
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		margin-right: 6px;
+	}
+
+	&__link {
+		font-size: 14px;
+		line-height: 1.2;
+		letter-spacing: 0.42px;
+		margin-right: 6px;
+	}
+}

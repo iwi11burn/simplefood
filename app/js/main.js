@@ -19,13 +19,12 @@ $('.reviews__slider').slick({
 })
 
 $(document).ready(function () {
-	let slickInitialized = false // Флаг для проверки инициализации слайдера
+	let slickInitialized = false
 
 	function initSlickSlider() {
-		const screenWidth = $(window).width() // Определяем ширину экрана
+		const screenWidth = $(window).width()
 
 		if (screenWidth <= 768) {
-			// Слайдер включается только на экранах <= 768px
 			if (!slickInitialized) {
 				$('.restaurant__list').slick({
 					dots: true,
@@ -39,16 +38,19 @@ $(document).ready(function () {
 			}
 		} else {
 			if (slickInitialized) {
-				// Если слайдер был инициализирован, удаляем его
 				$('.restaurant__list').slick('unslick')
-				slickInitialized = false // Сбрасываем флаг
+				slickInitialized = false
 			}
 		}
 	}
 
-	// Вызываем функцию при загрузке страницы и изменении размера экрана
 	initSlickSlider()
 	$(window).resize(initSlickSlider)
+})
+
+$('.menu-list__link').on('click', function (e) {
+	$('.menu-list__link').removeClass('menu-list__link--active')
+	$(this).addClass('menu-list__link--active')
 })
 
 var mixer = mixitup('.popular-categories__list')
