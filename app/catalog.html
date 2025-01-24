@@ -108,116 +108,86 @@
 			</div>
 		</div>
 		<div class="catalog__wrapper">
-			<div class="catalog__filters">
-				<div class="catalog__categories filters-container">
-					<h3 class="catalog__categories-title filters-title">Категории</h3>
-					<ul class="catalog__categories-list">
-						<li class="catalog__categories-item">
-							<button class="catalog__categories-button filter-text">
-								Бургеры
-							</button>
+			<div class="catalog__filter">
+				<div class="catalog__filter-inner">
+					<h3 class="catalog__filter-title">Категории</h3>
+					<ul class="catalog__filter-list">
+						<li class="catalog__filter-item">
+							<button class="catalog__filter-button">Бургеры</button>
 						</li>
-						<li class="catalog__categories-item">
-							<button class="catalog__categories-button filter-text">
-								Пицца
-							</button>
+						<li class="catalog__filter-item">
+							<button class="catalog__filter-button">Пицца</button>
 						</li>
-						<li class="catalog__categories-item">
-							<button class="catalog__categories-button filter-text">
-								Сэндвичи
-							</button>
+						<li class="catalog__filter-item">
+							<button class="catalog__filter-button">Сэндвичи</button>
 						</li>
-						<li class="catalog__categories-item">
-							<button class="catalog__categories-button filter-text">
-								Азиатская кухня
-							</button>
+						<li class="catalog__filter-item">
+							<button class="catalog__filter-button">Азиатская кухня</button>
 						</li>
-						<li class="catalog__categories-item">
-							<button class="catalog__categories-button filter-text">
-								Сеты
-							</button>
+						<li class="catalog__filter-item">
+							<button class="catalog__filter-button">Сеты</button>
 						</li>
-						<li class="catalog__categories-item">
-							<button class="catalog__categories-button filter-text">
-								Европейская кухня
-							</button>
+						<li class="catalog__filter-item">
+							<button class="catalog__filter-button">Европейская кухня</button>
 						</li>
-						<li class="catalog__categories-item">
-							<button class="catalog__categories-button filter-text">
-								Напитки
-							</button>
+						<li class="catalog__filter-item">
+							<button class="catalog__filter-button">Напитки</button>
 						</li>
-						<li class="catalog__categories-item">
-							<button class="catalog__categories-button filter-text">
-								Алкоголь
-							</button>
+						<li class="catalog__filter-item">
+							<button class="catalog__filter-button">Алкоголь</button>
 						</li>
 					</ul>
 				</div>
-				<div class="catalog__offers filters-container">
-					<h3 class="catalog__offers-title filters-title">Предложения</h3>
-					<ul class="catalog__offers-list">
-						<li class="catalog__offers-item">
-							<label class="catalog__offers-label">
-								<input
-									class="catalog__offers-input filter-text"
-									type="checkbox"
-								/>
+				<div class="catalog__filter-inner">
+					<h3 class="catalog__filter-title">Предложения</h3>
+					<ul class="catalog__filter-list">
+						<li class="catalog__filter-item">
+							<label class="catalog__filter-checkbox-label">
+								<input class="catalog__filter-checkbox" type="checkbox" />
 								Со скидкой
 							</label>
 						</li>
-						<li class="catalog__offers-item">
-							<label class="catalog__offers-label">
+						<li class="catalog__filter-item">
+							<label class="catalog__filter-checkbox-label">
 								<input
-									class="catalog__offers-input filter-text"
+									class="catalog__filter-checkbox"
 									type="checkbox"
 									checked
 								/>
 								Новинка
 							</label>
 						</li>
-						<li class="catalog__offers-item">
-							<label class="catalog__offers-label">
-								<input
-									class="catalog__offers-input filter-text"
-									type="checkbox"
-								/>
+						<li class="catalog__filter-item">
+							<label class="catalog__filter-checkbox-label">
+								<input class="catalog__filter-checkbox" type="checkbox" />
 								Хит
 							</label>
 						</li>
 					</ul>
 				</div>
-				<div class="catalog__price-range filters-container">
-					<h3 class="catalog__price-range-title filters-title">Цена</h3>
-					<div class="catalog__price-range-inputs">
-						<div class="catalog__price-range-input-wrapper">
-							<span class="catalog__price-range-label filter-text">От</span>
+				<div class="catalog__filter-inner">
+					<h3 class="catalog__filter-title">Цена</h3>
+					<div class="catalog__filter-inputs">
+						<div class="catalog__filter-input-wrapper">
+							<span class="catalog__filter-label catalog__filter-span-text">От</span>
 							<input
-								class="catalog__price-range-input"
+								class="catalog__filter-input"
 								type="number"
 								id="min-price"
 								value="100"
 							/>
+							<span class="catalog__filter-currency catalog__filter-span-text">&#8372</span>
 						</div>
-						<div class="catalog__price-range-input-wrapper">
-							<span class="catalog__price-range-label filter-text">До</span>
+						<div class="catalog__filter-input-wrapper">
+							<span class="catalog__filter-label catalog__filter-span-text">До</span>
 							<input
-								class="catalog__price-range-input"
+								class="catalog__filter-input"
 								type="number"
 								id="max-price"
 								value="1000"
 							/>
+							<span class="catalog__filter-currency catalog__filter-span-text">&#8372</span>
 						</div>
-					</div>
-					<div class="catalog__price-range-slider">
-						<input
-							class="catalog__price-range-slider-input"
-							type="range"
-							id="range"
-							min="0"
-							max="1000"
-							value="100"
-						/>
 					</div>
 				</div>
 			</div>
